@@ -26,7 +26,7 @@ def is_reserved(word):
     return None
 
 while True:
-    word = input("Check: ")
+    word = input("Check: ").upper()
     if not is_reserved(word):
         print("It is not a reserved word in postgresql.\n")
 
