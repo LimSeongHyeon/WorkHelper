@@ -1,0 +1,44 @@
+Now that we have the ciphertext, we will generate the signatures using the code below to sign the message with our private key. This enables the sender to verify the message with the public key and determine if the message is authentic:
+
+signature = sign(message, privateKey)
+Next, we will decrypt our encrypted message to have plain text. To implement this, we will create a decryption method and pass it in the ciphertext and the private key as shown below:
+
+text = decrypt(ciphertext, privateKey)
+After getting our plain text, the next thing to do is to print out the ciphertext and the signature.
+
+print(f'Cipher text: {ciphertext}')
+print(f'Signature: {signature}')
+We will check the plain text in the next step. If it is plain text, then we indicate message was successfully decrypted otherwise, unable to decrypt the message:
+Now that we have the ciphertext, we will generate the signatures using the code below to sign the message with our private key. This enables the sender to verify the message with the public key and determine if the message is authentic:
+
+signature = sign(message, privateKey)
+Next, we will decrypt our encrypted message to have plain text. To implement this, we will create a decryption method and pass it in the ciphertext and the private key as shown below:
+
+text = decrypt(ciphertext, privateKey)
+After getting our plain text, the next thing to do is to print out the ciphertext and the signature.
+
+print(f'Cipher text: {ciphertext}')
+print(f'Signature: {signature}')
+We will check the plain text in the next step. If it is plain text, then we indicate message was successfully decrypted otherwise, unable to decrypt the message:
+Now that we have the ciphertext, we will generate the signatures using the code below to sign the message with our private key. This enables the sender to verify the message with the public key and determine if the message is authentic:
+
+signature = sign(message, privateKey)
+Next, we will decrypt our encrypted message to have plain text. To implement this, we will create a decryption method and pass it in the ciphertext and the private key as shown below:
+
+text = decrypt(ciphertext, privateKey)
+After getting our plain text, the next thing to do is to print out the ciphertext and the signature.
+
+print(f'Cipher text: {ciphertext}')
+print(f'Signature: {signature}')
+We will check the plain text in the next step. If it is plain text, then we indicate message was successfully decrypted otherwise, unable to decrypt the message:
+Now that we have the ciphertext, we will generate the signatures using the code below to sign the message with our private key. This enables the sender to verify the message with the public key and determine if the message is authentic:
+
+signature = sign(message, privateKey)
+Next, we will decrypt our encrypted message to have plain text. To implement this, we will create a decryption method and pass it in the ciphertext and the private key as shown below:
+
+text = decrypt(ciphertext, privateKey)
+After getting our plain text, the next thing to do is to print out the ciphertext and the signature.
+
+print(f'Cipher text: {ciphertext}')
+print(f'Signature: {signature}')
+We will check the plain text in the next step. If it is plain text, then we indicate message was successfully decrypted otherwise, unable to decrypt the message:
