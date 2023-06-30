@@ -22,7 +22,6 @@ class AWS_Crypto:
             self.key_arn = arn
         else:
             self.key_arn = self.get_cmk_arn(alias)
-            ic(self.key_arn)
         self.client = aws_encryption_sdk.EncryptionSDKClient(
             commitment_policy=CommitmentPolicy.REQUIRE_ENCRYPT_REQUIRE_DECRYPT)
 
@@ -36,7 +35,6 @@ class AWS_Crypto:
         alias = 'alias/' + alias
         kms_client = boto3.client('kms')
         response = kms_client.list_aliases()
-        print(response)
         for alias_entry in response['Aliases']:
             if alias_entry['AliasName'] == alias:
                 target_key_id = 'key/' + alias_entry['TargetKeyId']
@@ -47,13 +45,11 @@ class AWS_Crypto:
     def encrypt(self, plain_bytes):
         cipher_bytes, encryptor_header = self.client.encrypt(source=plain_bytes,
                                                              key_provider=self.master_key_provider)
-        ic(encryptor_header)
         return cipher_bytes
 
     def decrypt(self, cipher_bytes):
         plain_bytes, decrypted_header = self.client.decrypt(source=cipher_bytes,
                                                             key_provider=self.master_key_provider)
-        ic(decrypted_header)
         return plain_bytes
 
     def file_encrypt(self, file_path):

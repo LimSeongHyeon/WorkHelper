@@ -108,9 +108,9 @@ def create_fake_customer(amount):
         result = str(result_list).replace("\"", "").removeprefix("[").removesuffix("]")
 
         query = f"INSERT INTO CUSTOMER_TB ({attributes}) VALUES ({result})"
-        print(query)
+        print("[INSERT]", result)
         cur.execute(query)
         conn.commit()
 
 
-create_fake_customer(100)
+create_fake_customer(int(input("Input Test User Amount: ")))
