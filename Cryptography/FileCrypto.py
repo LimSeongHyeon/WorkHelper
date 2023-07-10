@@ -13,7 +13,6 @@ def load_key(keyname):
     with open(f'{keyname}.key', 'rb') as key_file:
         return key_file.read()
 
-
 def encrypt_file(filename, key):
     with open(filename, 'rb') as plain_file:
         plain_bytes = plain_file.read()
