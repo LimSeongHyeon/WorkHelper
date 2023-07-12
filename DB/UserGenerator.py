@@ -113,4 +113,18 @@ def create_fake_customer(amount):
         conn.commit()
 
 
-create_fake_customer(int(input("Input Test User Amount: ")))
+# SELECT 쿼리 실행
+cur.execute("SELECT * FROM customer_tb")
+
+# 결과 가져오기
+results = cur.fetchall()
+
+# 속성 이름 출력
+column_names = [desc[0] for desc in cur.description]
+print("Column Names:", column_names)
+
+# 결과 값 출력
+for row in results:
+    # 결과 값을 속성 이름과 함께 출력
+    row_dict = dict(zip(column_names, row))
+    print(row_dict)
